@@ -14,6 +14,30 @@ def PUT(path):
         return wrapper
     return decorator
 
+def POST(path):
+    def decorator(fun):
+        def wrapper(*args,  **kwargs):
+            result = fun(*args, **kwargs)
+            return result
+        return wrapper
+    return decorator
+
+def DELETE(path):
+    def decorator(fun):
+        def wrapper(*args,  **kwargs):
+            result = fun(*args, **kwargs)
+            return result
+        return wrapper
+    return decorator
+
+def ANY(path):
+    def decorator(fun):
+        def wrapper(*args,  **kwargs):
+            result = fun(*args, **kwargs)
+            return result
+        return wrapper
+    return decorator
+
 def memory_size(arg):
     def decorator(fun):
         def wrapper(*args,  **kwargs):
@@ -30,7 +54,15 @@ def timeout(arg):
         return wrapper
     return decorator
 
-def environment(*args,  **kwargs):
+def environment(*eargs,  **kwargs):
+    def decorator(fun):
+        def wrapper(*args,  **kwargs):
+            result = fun(*args, **kwargs)
+            return result
+        return wrapper
+    return decorator
+
+def layer(*largs,  **kwargs):
     def decorator(fun):
         def wrapper(*args,  **kwargs):
             result = fun(*args, **kwargs)
@@ -46,7 +78,23 @@ def runtime(arg):
         return wrapper
     return decorator
 
-def environment(*args):
+def security_group(*sgargs):
+    def decorator(fun):
+        def wrapper(*wargs,  **kwargs):
+            result = fun(*wargs, **kwargs)
+            return result
+        return wrapper
+    return decorator
+
+def vpc(arg):
+    def decorator(fun):
+        def wrapper(*args,  **kwargs):
+            result = fun(*args, **kwargs)
+            return result
+        return wrapper
+    return decorator
+
+def role(arg):
     def decorator(fun):
         def wrapper(*args,  **kwargs):
             result = fun(*args, **kwargs)
