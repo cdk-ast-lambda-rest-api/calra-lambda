@@ -1,10 +1,10 @@
-# CDK Ast Lambda Rest API - CDK Packge (CALRA)
+# CDK Ast Lambda Rest API - Lambda Packge (CALRA)
 
 ## A library for AWS API Gateway/Lambda Proxy Integration
 
 CALRA allows simplified resource creation for AWS Lambda functions and Rest API resources by using decorators and setting a builder with default, common or custom values for IAM Roles, Runtimes, Timeouts, Layers, Environment values, etc.
 
-This module provides the definition of decorators that are used for
+This module provides the definition of decorators that are used within lambda handlers to add special configuration options for your Lambda Function.
 
 ### Installation
 
